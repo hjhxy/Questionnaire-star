@@ -1,24 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect, useRef, useState } from 'react';
+import type { FC } from 'react';
 import './App.css';
+import Child1 from './components/Child1';
 
-function App() {
+interface Iprops {
+  name?: string, // 可传可不传
+  getName?: () => void
+}
+
+const App: FC<Iprops> = (props) => {
+  // const { name, getName } = props;
+
+  // let [number, setNumber] = useState(0); // 无法通过监听数据的修改驱动视图。
+  // const [person, setPerson] = useState([1, 2, 3]);
+
+  // // const inputRef = useRef<any>(null);
+  // // inputRef.current = 10;
+
+  // console.log(name);
+
+  // // getName!(); // 依然是有可能报错的，但是可以告诉ts的编译器，说这个直接放行即可。
+  // getName && getName(); // 这种方式不仅仅可以避免ts的问题还可以避免js运行出错
+
+  // const testPerson = () => { // 驱动试图更新
+  //   person.push(22);
+  //   console.log(person);
+  //   // setNumber(1);
+  //   number = 2; // 一样触发 useEffect 方法
+  // }
+
+  // useEffect(()=>{
+  //   console.log("组件挂载");
+  //   return ()=>{
+  //     console.log("组件卸载");
+  //   }
+  // })
+
+  // useEffect(()=>{
+  //   console.log("组件更新"); // 只要检测到数据变化
+  // }, [number]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Child1/>
     </div>
   );
 }
