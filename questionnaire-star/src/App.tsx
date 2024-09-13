@@ -7,6 +7,7 @@ interface Iprops {
   getName?: () => void
 }
 
+/* test git config */
 const App: FC<Iprops> = (props) => {
   return (
     <div className="App">
