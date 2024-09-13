@@ -1,0 +1,43 @@
+.container {
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 14px;
+
+    &:hover {
+        box-shadow: 2px 4px 2px 2px #f3f3f3;
+    }
+
+    .header {
+        display: flex;
+
+        .left {
+            flex: 1;
+        }
+
+        .right {
+            width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .footer {
+        display: flex;
+
+        .left {
+            flex: 1;
+
+            span {
+                margin: 0px 10px;
+            }
+        }
+
+        .right {
+            width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            color: #727272;
+        }
+    }
+}

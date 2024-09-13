@@ -1,0 +1,14 @@
+.container {
+
+    .header {}
+
+    .body {
+        .card {
+            &:nth-of-type(n+2) {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .footer {}
+}
