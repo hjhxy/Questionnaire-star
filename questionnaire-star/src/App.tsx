@@ -1,17 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 import type { FC } from 'react';
 import './App.css';
+import { Outlet, RouterProvider } from 'react-router-dom';
+import routerConfig from './router';
 
 interface Iprops {
   name?: string, // 可传可不传
   getName?: () => void
 }
 
-/* test git config */
 const App: FC<Iprops> = (props) => {
   return (
     <div className="App">
-      root
+      1
+      <RouterProvider router={routerConfig}></RouterProvider>
     </div>
   );
 }
