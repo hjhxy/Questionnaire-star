@@ -12,7 +12,7 @@ interface Iprops {
 const App: FC<Iprops> = (props) => {
   return (
     <div className="App">
-      1
+      {/* routerProvider充当第一级路由 */}
       <RouterProvider router={routerConfig}></RouterProvider>
     </div>
   );

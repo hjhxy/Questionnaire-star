@@ -17,31 +17,31 @@ import NotFound from '../pages/404';
 const routes = [
     {
         path: '/',
-        // element: <MainLayout />,
+        element: <MainLayout />,
         children: [
             {
                 path: '',
-                // element: <Home />
+                element: <Home />
             },
             {
                 path: 'login',
-                // element: <Login />
+                element: <Login />
             },
             {
                 path: 'register',
-                // element: <Register />
+                element: <Register />
             },
             {
                 path: 'question',
-                // element: <QuestionLayout />,
+                element: <QuestionLayout />,
                 children: [
                     {
                         path: 'edit/:id',
-                        // element: <Edit />
+                        element: <Edit />
                     },
                     {
                         path: 'stat/:id',
-                        // element: <Stat />
+                        element: <Stat />
                     },
                 ]
             },
@@ -49,26 +49,26 @@ const routes = [
     },
     {
         path: 'manage',
-        // element: <ManagerLayout />,
+        element: <ManagerLayout />,
         children: [
             {
                 path: 'list',
-                // element: <List />
+                element: <List />
             },
             {
                 path: 'recycle',
-                // element: <Recycle />
+                element: <Recycle />
             },
             {
                 path: 'star',
-                // element: <Star />
+                element: <Star />
             },
         ]
     },
     /* 404 页面 兜底 */
     {
         path: '*',
-        // element: <NotFound />,
+        element: <NotFound />,
     }
 ];
 
